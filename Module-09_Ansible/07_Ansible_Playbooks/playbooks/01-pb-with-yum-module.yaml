@@ -1,0 +1,16 @@
+# Description: This playbook is responsible for installing Apache web server on remote system and then remove it
+# Author: Novatec IT Services
+
+- hosts:
+  remote_user: root
+  become: yes
+  tasks:
+    - name: Install Apache
+      yum: 
+        name: httpd
+        state: installed
+    - name: Remove Apache
+      yum: 
+        name: httpd
+        state: removed
+        

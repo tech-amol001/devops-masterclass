@@ -1,0 +1,30 @@
+# COMMENTS SECTION
+# Description: This playbook will install httpd package on remote host (clientnode)
+# Author: K Bindesh
+# hosts - targets a computer or computers.
+# tasks - opens a list of tasks you want to be performed on the hosts
+# name - a human-friendly title for a task or a play
+# become - permits Ansible to change which user is running this task
+# become_user - permits Ansible to become the root user to run this task. FYI, only the root user can install new package using dnf/yum/apk
+# yum - is the name of the module, which you discovered from the module index on the Ansible website
+
+---
+- name: Install Package
+  hosts: clientnode
+  tasks:
+    - name: Install HTTPD
+      become: true
+      become_user: root
+      ansible.builtin.yum:
+        name: httpd
+        state: latest
+    - name: Start HTTPD Service
+      ansible.builtin.service:
+        name: httpd
+        state: started
+    - name: Enable HTTPD Service
+      ansible.builtin.service:
+        name: httpd
+        enabled: yes
+# yum module reference: https://docs.ansible.com/ansible/latest/collections/ansible/builtin/yum_module.html
+# service module reference: https://docs.ansible.com/ansible/latest/collections/ansible/builtin/service_module.html

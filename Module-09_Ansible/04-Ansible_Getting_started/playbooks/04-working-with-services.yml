@@ -1,0 +1,19 @@
+# Service module ref link: https://docs.ansible.com/ansible/latest/collections/ansible/builtin/service_module.html
+---
+- name: Install Package
+  hosts: clientnode
+  become: true
+  become_user: root
+  tasks:
+    - name: Install HTTPD
+      ansible.builtin.yum:
+        name: httpd
+        state: latest
+    - name: Start HTTPD Service
+      ansible.builtin.service:
+        name: httpd
+        state: started
+    - name: Enable HTTPD Service
+      ansible.builtin.service:
+        name: httpd
+        enabled: yes
