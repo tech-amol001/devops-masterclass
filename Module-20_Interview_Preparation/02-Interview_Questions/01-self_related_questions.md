@@ -51,3 +51,11 @@
   - Ubuntu (version)
   - CentOS (version)
   - RHEL (version)
+
+## What did you learn yesterday/this week?
+
+## Talk about your preferred development/administration environment. (OS, Editor, Browsers, Tools etc.)
+
+## Tell me about the biggest mistake you've made in [some recent time period] and how you would do it differently today. What did you learn from that experience?
+
+## Why should we select you for this position?

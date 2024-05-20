@@ -21,3 +21,17 @@
 - **Ques-10**: What is your Project Team size? | What other teams you work with as a DevOps Engg in your Project?
 
 - **Ques-11**: Have you used any Version Control System before? | Explain the code flow | Be prepare with `git concepts` like Pull requests, Branches, merging techniques etc.
+
+- **Ques-12**: What function does DNS play on a network?
+
+- **Ques-13**: What is HTTP?
+
+- **Ques-14**: What is an HTTP proxy and how does it work?
+
+- **Ques-15**: Describe briefly how HTTPS works.
+
+- **Ques-16**: Describe the general file system hierarchy of a Linux system.
+
+- **Ques-17**: Which difference have between public and private SSH key?
+
+- **Ques-18**: Tell me about the last major project you finished
