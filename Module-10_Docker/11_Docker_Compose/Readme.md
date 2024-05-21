@@ -52,7 +52,8 @@
 
 ### Step-00: Install and Configure `Docker Compose`
 
-- For more details, refer https://docs.docker.com/compose/install/
+- For more details, refer https://docs.docker.com/compose/install/linux/
+  
 #### Compose V1 Installation (earlier)
 
 ```
