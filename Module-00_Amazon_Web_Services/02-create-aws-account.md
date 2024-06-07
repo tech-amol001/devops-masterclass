@@ -1,14 +1,20 @@
-# Setting-up AWS Free Tier Account
+# Create an AWS Account (Free tier)
 
 This article will help you understand how to create AWS Free Tier Account. For more details, checkout the official documentation here:
 
-### Step-01: Launch your web browser and navigate to [AWS Free Tier](https://aws.amazon.com/free) page.
+### Step-01: Launch your web browser and navigate to [AWS Free Tier](https://aws.amazon.com/free) page
 
-### Step-02: Click on the **Create a Free Account** button.
+### Step-02: Initiate the AWS Account creation process
 
-### Step-03: Issue the details that you want to use to log in to your AWS account and click on Continue
+- Click on the **Create a Free Account** button
 
-- **Email address**: Provide the a valid Email address that hasn't been registered yet with Amazon AWS. This field value will be the root username.
+<img src="images/createaccountbutton.png" width="500" height="240" />
+
+### Step-03: Configure `Root User Email Address` and `Account name`
+
+<img src="images/awsaccountsignup.png" width="350" height="240" />
+
+- **Root user email address**: Enter a valid email address that hasn't been registered yet with Amazon AWS. This field value will be the root username.
 - **Password**: Set a sign-in password for your account
 - **Confirm password**: Confirm the sign-in password by retyping it.
 - **AWS Account name**: Choose a name for your account. You can change this name in your account settings after you sign up.
@@ -17,14 +23,14 @@ This article will help you understand how to create AWS Free Tier Account. For m
 
 ### Step-04: Verify your email address
 
-- Check your email inbox for an email from AWS regarding the email address verification. Kindly confirm it.
+- Check your email inbox for an email notification from AWS regarding the email address verification. Kindly confirm it.
 
 ### Step-05: Provide Contact Information
 
 - **AWS type (Profesional/ Personal)**: Personal Account
 - **Phone No**: <valid_phone_no>
 - **Country**: <country_name>
-- **Address**: <address>
+- **Address**: <your_address_here>
 
 - **Accept the Terms and condition** and then click on **Create Account** and **Continue**
 
