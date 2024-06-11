@@ -41,6 +41,39 @@ There are multiple ways to use AWS CodeCommit:
 
 ### Step-02: Add files to your repository (commit)
 
+You can add files to your repository by following ways:
+
+1. **From CodeCommit console**
+   - If you create the first file for a repository in the console, a branch is created for you with a name **main**.
+   - This branch is the _default branch_ for your repository.
+2. **Uploading a file from your local computer using the CodeCommit console**
+
+3. **Using a Git client**
+
+   - First, clone the repository to your local computer
+
+   ```
+   git clone <your_github_repo_url>
+   ```
+
+   - Then add the committing, and pushing files to the CodeCommit repository.
+
+   ```
+   git add .
+
+   git commit -m <commit_message>
+
+   git push -u <origin> <remote_branch>
+   ```
+
 ### Step-03: Browse the contents of your repository
 
+- Navigate to the AWS CodeCommit service dashboard >> Repositories
+- Select your repository from the list. It will display the contents present in the default branch of your repository.
+
 ### Step-04: Collaborate with Pull Request
+
+- You can create a pull request so that other users can review and comment on your code changes in a branch.
+- You can also create one or more approval rules for the pull request.
+- In the navigation pane, choose **Pull requests** >> **Create pull request**
+- In Create pull request, in _Source_, choose the branch that contains the changes you want reviewed. In _Destination_, choose the branch where you want the reviewed code to be merged when the pull request is closed. Choose Compare.
