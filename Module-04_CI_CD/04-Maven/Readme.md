@@ -1,4 +1,4 @@
-# Maven 101
+# Demystifying Maven
 
 In this section, we will learn below topics:
 
@@ -10,12 +10,12 @@ In this section, we will learn below topics:
 - Build maven project
 - Execute maven project
 
-## What is a Build?
+## 01. What is a Build?
 
 - A software build is a set of executable code that is ready for use by customers.
 - The DevOps team compiles the source code, such as code in Java or C++, into binaries to make sure it's functional and test code quality before committing it.
 
-## Understanding Build process
+## 02. Understanding Build process
 
 The process followed by a software development team when building software is as listed below:
 
@@ -25,7 +25,7 @@ The process followed by a software development team when building software is as
 - Run different versions of the build and conduct unit tests.
 - Link the relevant files and send notifications to the stakeholders.
 
-## What is Apache Maven?
+## 03. What is Apache Maven?
 
 - **Apache Maven** is a build tool, which helps developer in building application.
 - The Apache Maven is a Java build tool which can be used compile, test and package enterprise softwares.
@@ -36,9 +36,9 @@ The process followed by a software development team when building software is as
   - Enables switching between development profiles.
   - Integrates with DevOps tools such as Jenkins and Docker.
 
-## [Maven Installation](https://maven.apache.org/download.cgi)
+## 04. [Maven Installation](https://maven.apache.org/download.cgi)
 
-### Maven installation on Amazon Linux 2 AMI
+### Step-4.1: Maven installation on Amazon Linux 2 AMI
 
 ```
 # Download maven repo details
@@ -96,7 +96,7 @@ source ~/.bash_profile
 mvn -version
 ```
 
-## What is an `Apache Maven` phase?
+## 05. What are `Apache Maven phases`?
 
 - To perform various build operations, Apache Maven provides a variety of phases that admins can invoke on a project through the `mvn` command.
 - Commonly used Apache Maven phases include:
@@ -106,13 +106,13 @@ mvn -version
   - **package** – creates an artifact such as a JAR, ZIP or WAR file.
   - **install** – moves a created artifact into a Maven repository.
 
-## How does `Maven` manage Java dependencies?
+## 06. How does `Maven` manage Java dependencies?
 
 - At the root of every Maven project is a Project Object Model file named **pom.xml**. This file lists all of a project's dependencies on third-party libraries or external JAR files.
 - You can also create complex dependencies if you set up one pom.xml file as parent to another **pom.xml file**.
 - This is often done with frameworks including Spring Boot to reference a large number of projects.
 
-## What is the difference between `Maven` and `Jenkins`?
+## 07. What is the difference between `Maven` and `Jenkins`?
 
 - **Apache Maven** and Jenkins are not similar technologies, as many people mistakenly think.
 - Jenkins is a continuous integration (CI) tool that automates pulling code from source code repositories (GitHub, GitLab, etc.) and subsequently compiling it.

@@ -1,3 +1,0 @@
-# GitHub Collaboration and Contribution
-
-##
