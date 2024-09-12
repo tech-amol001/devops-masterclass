@@ -64,6 +64,7 @@
   - **Name**: <name_of_the_instance>
   - **AMI**: Amazon Linux 2
   - **Instance Type**: t2.micro
+  - **Key Pair**: <create_a_new_keypair>
   - **Network settings (VPC, Subnet, Public IP)**: <leave_to_defaults>
   - **Firewall (SG)**: Allow ingress on 22 (SSH) for all IPv4
   - **Storage**: <leave_to_defaults>
@@ -75,6 +76,20 @@
   2. Using AWS CloudShell
   3. Using **ssh** utility (from your local windows/linux/mac machine)
   4. Using any external SSH clients (mobaxterm, putty etc)
+
+## 01. Basic Commands
+
+| Command      | Description                                                             |
+| :----------- | :---------------------------------------------------------------------- |
+| **man**      | Shows manual of the command                                             |
+| **hostname** | Displays hostname of the system                                         |
+| **clear**    | Clear the screen                                                        |
+| **date**     | Displays the current date and time                                      |
+| **cal**      | Displays current month's calendar                                       |
+| **uptime**   | Displays how long the system has been running                           |
+| **whoami**   | Displays the username of the effective user currently running the shell |
+| **finger**   | Get the details of the user                                             |
+| **who**      | Displays information about all the currently logged-in users            |
 
 ## 02. Managing Files and Directories
 
