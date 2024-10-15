@@ -23,7 +23,7 @@
 
 - Web Development (Flask, Django)
 - Data science and Data Analytics
-- Console based applications
+- Console based applicationss
 - Desktop GUI applications
 - Machine learning
 - Artificial Intelligence

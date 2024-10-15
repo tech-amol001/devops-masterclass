@@ -4,6 +4,4 @@
 
 - SonarQube Server | [For detailed steps, click here](01-setup-sonarqube-on-amzn-lnx.md)
 
-- Jenkins Server | [For detailed steps, click here]()
-
-## Step-02:
+- Jenkins Server | [For detailed steps, click here]()s
