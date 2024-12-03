@@ -2,20 +2,20 @@
 
 In this lab, there will be two machines:
 
-1. **Ansible Server (Controller node)** - where we will execute all the playbooks.
+- **Ansible Server (Controller node)** - where we will execute all the playbooks.
 
-- I've used Amazon Linux 2 ec2 instance for the Ansible controller.
+  - I've used Amazon Linux 2 ec2 instance for the Ansible controller.
 
-2. **Target Machine (client/managed node)** - to which "_Ansible Server_" will send the instructions mentioned via playbook tasks and eventually will be executed here.
+- **Target Machine (client/managed node)** - to which "_Ansible Server_" will send the instructions mentioned via playbook tasks and eventually will be executed here.
 
-- I've used RHEL8 ec2 instance here.
-- You may use any other linux/windows machine.
+  - I've used RHEL8 ec2 instance here.
+  - You may use any other linux/windows machine.
 
-3. :warning: Make sure there is a connectivity between both the machines over SSH/RDP.
+- :warning: Make sure there is a connectivity between both the machines over SSH/RDP.
 
-- Try to provision both the machine in the same VPC.
+- Provision both the machines in the same Amazon VPC.
 
-## Step-01: Setup Ansible Server on `Amazon Linux 2 (EC2 Instance)`
+## Step-01: Setup `Ansible controller` on Amazon Linux 2 EC2 instance
 
 ### 1.1: Provision an EC2 instance
 
@@ -88,7 +88,7 @@ $ sudo yum --enablerepo epel install -y ansible
 $ ansible --version
 ```
 
-## Step-02: Setup Managed node (client) on RHEL EC2 instance
+## Step-02: Setup `Ansible Managed node` (client) on RHEL EC2 instance
 
 ### 2.1: Provision an EC2 instance
 
@@ -133,7 +133,7 @@ service sshd reload
 
 ## Step-03: Copy generated SSH key to managed node (RHEL client)
 
-- Switch to `Ansible controller` node and run following commands:
+- Switch to `ansible controller` node and run following commands:
 
 ```
 sudu su - ansibleadmin
