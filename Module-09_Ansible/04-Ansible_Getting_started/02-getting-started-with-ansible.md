@@ -1,13 +1,17 @@
 # Getting started with Ansible
 
-## 00. Controlling where the task runs
+## 00. Controlling where to run the task ?
+
+- Localhost
+- Server
+- Group of Servers
 
 ## 01. Print a message or a variable
 
 - Connect to your ansible server.
 - In order to print the message or a variable during execution, use [ansible.builtin.debug](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/debug_module.html) module.
 
-### Step-01: Create a playbook (.yaml)
+### Step-01: Create a playbook (.yaml/.yml)
 
 - The below playbook is for printing a hello message on ansible server.
 
@@ -21,7 +25,9 @@
         msg: hello
 ```
 
-### Step-02: Execute the ansible playbook
+- Save the above the playbook with .yml/.yaml extension.
+
+### Step-02: Execute the Ansible playbook
 
 ```
 # Syntax
@@ -171,3 +177,29 @@ ansible-playbook var-lab-playbook.yml
   1. Connection plugin
   2. delegate_to: localhost
   3. local_action
+
+## 07. Limiting playbooks to particular hosts and groups
+
+- In this case (assuming your inventory file contains a webservers group), even if the playbook is set to `hosts: all`, or includes hosts in addition to what is defined in the `webservers` group, it will only be run on the hosts defined in _webservers_.
+
+```
+ansible-playbook playbook.yml --limit webservers
+```
+
+- You could also limit the playbook to one particular host:
+
+```
+ansible-playbook playbook.yml --limit xyz.example.com
+```
+
+- If you want to see a list of hosts that would be affected by your playbook before you actually run it, use `--list-hosts` option:
+
+```
+ansible-playbook playbook.yml --list-hosts
+```
+
+## 08. Setting user and sudo options with ansible-playbook
+
+```
+
+```
