@@ -13,11 +13,19 @@ localhost ansible_connection=local
 
 # Now, tell ansible the location of host file through /etc/ansible/ansible.cfg
 inventory      = /etc/ansible/hosts
+
+# Supported plugins
+[inventory]
+enable_plugins = host_list, script, auto, yaml, ini, toml
 ```
 
 ### Display message on the standard output
 
 ```
+ansible localhost -a "date"
+
+ansible localhost -m command -a "uptime"
+
 # Execute ansible adhoc command
 ansible localhost -m debug -a "msg='Sample text'"
 

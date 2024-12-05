@@ -1,6 +1,6 @@
 # [Ansible Inventory](https://docs.ansible.com/ansible/latest/inventory_guide/intro_inventory.html)
 
-## What is an Ansible Hosts file?
+## 01. What is an Ansible Hosts file?
 
 - Ansible Host file (also known as inventory) defines the managed nodes configurations that you automate, with groups so you can run automation tasks on multiple hosts at the same time.
 - Once your inventory is defined, you use patterns to select the hosts or groups you want Ansible to run actions on it.
@@ -11,6 +11,7 @@
   - <b>_INI_</b>
   - <b>_YAML_</b>
 - Sample inventory file
+
   ```
     appserver.novatec.com
 
@@ -24,7 +25,7 @@
     dbserver2.novatec.com
   ```
 
-## How to connect to remote host using Ansible inventory file (INI/YAML) ?
+## 02. How to connect to remote host using Ansible inventory file (INI/YAML) ?
 
 ```
 # With inventory in INI format
@@ -36,7 +37,7 @@ ansible -i 02-sample-inventory.ini -m ping
 ansible -i 04-sample-inventory.yaml -m ping
 ```
 
-## Passing multiple inventory sources
+## 03. Passing multiple inventory sources
 
 - You can target multiple inventory sources at the same time by giving multiple inventory parameters from the command line or by configuring ANSIBLE_INVENTORY.
 - This can be useful when you want to target normally separate environments, like staging and production, at the same time for a specific action.
@@ -45,7 +46,7 @@ ansible -i 04-sample-inventory.yaml -m ping
   ansible-playbook get_logs.yml -i staging-inventory.yml -i prod-inventory.yml
   ```
 
-## Organizing inventory in a custom directory
+## 04. Organizing inventory in a custom directory
 
 - You can consolidate multiple inventory sources in a single directory. The simplest version of this is a directory with multiple files instead of a single inventory file.
 - A single file gets difficult to maintain when it gets too long.
@@ -62,12 +63,13 @@ ansible -i 04-sample-inventory.yaml -m ping
   ```
 - You can also configure the inventory directory in your _ansible.cfg_
 
-## Adding Variables to the inventory file
+## 05. Adding Variables to the inventory file
 
-## Assigning variables to many hosts: Group Variables
+## 06. Assigning variables to many hosts: Group Variables
 
 - If all hosts in a group share a variable value, you can apply that variable to an entire group at once.
 - In INI inventory file, it will be like:
+
   ```
   [mumbaiServers]
      host1
@@ -77,6 +79,7 @@ ansible -i 04-sample-inventory.yaml -m ping
      smtp_server=smtp.mumbai.novatec.com
      proxy=proxy.mumbai.novatec.com
   ```
+
 - In YAML inventory file, it will be like:
   ```
    mumbai:
@@ -88,10 +91,10 @@ ansible -i 04-sample-inventory.yaml -m ping
        proxy: proxy.mumbai.novatec.com
   ```
 
-## [Ansible Inventory Parameters (Variables)](https://github.com/novatecstack/ansible-masterclass/blob/main/Module-05_Ansible_Inventory/inventory-variables.md)
+## 07. [Ansible Inventory Parameters (Variables)](https://github.com/novatecstack/ansible-masterclass/blob/main/Module-05_Ansible_Inventory/inventory-variables.md)
 
-## Working with Dynamic Inventory
+## 08. Working with Dynamic Inventory
 
-## Reference Links
+## 09. Reference Links
 
 - [Ansible Inventory Official Documentation](https://docs.ansible.com/ansible/latest/inventory_guide/intro_inventory.html)

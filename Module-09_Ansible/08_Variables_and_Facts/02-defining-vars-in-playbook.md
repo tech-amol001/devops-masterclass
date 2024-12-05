@@ -1,4 +1,4 @@
-# Defining Variables in Playbook
+# Ansible Variables
 
 ## Define variables in `vars` section
 
