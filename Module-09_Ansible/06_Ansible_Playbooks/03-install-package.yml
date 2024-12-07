@@ -1,4 +1,3 @@
-# COMMENTS SECTION
 # Description: This playbook will install httpd package on remote host (clientnode)
 # Author: K Bindesh
 # hosts - targets a computer or computers.

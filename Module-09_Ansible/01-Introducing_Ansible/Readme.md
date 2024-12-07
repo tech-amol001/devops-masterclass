@@ -53,10 +53,12 @@ Ansible's community packages are distributed in two ways:
 
 ## Ansible CLI Tools
 
+- ansible
+
 - ansible-playbook
 
+- ansible-doc
 - ansible-inventory
-
 - ansible-galaxy
 - ansible-console
 - ansible-test

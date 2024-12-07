@@ -1,6 +1,23 @@
 # Ansible Ad-hoc Commands
 
-### Ansible ad-hoc command syntax
+## Step-01: Configuring ansible for running modules on `Localhost`
+
+```
+# Update the /etc/ansible/hosts file to add localhost
+localhost ansible_connection=local
+
+# Now, tell ansible the location of host file through /etc/ansible/ansible.cfg
+# uncomment the following line
+inventory      = /etc/ansible/hosts
+
+# Supported plugins - Uncomment the following line
+[inventory]
+enable_plugins = host_list, script, auto, yaml, ini, toml
+```
+
+## Step-02: Ansible ad-hoc commands
+
+### 2.1 Ansible ad-hoc command syntax
 
 ```
 # Syntax
@@ -10,16 +27,24 @@ ansible <host_pattern> -m module <module_name> -a <arguments>
 ansible localhost -m debug -a "msg='Hello there'"
 ```
 
-### Print a statement - `debug` module
+### 2.2 Print a statement - `debug` module
 
 - The `debug` module prints statements during playbook execution.
 - Useful for debugging variables or expressions without necessarily halting the playbook.
 
 ```
-ansible localhost -m debug -a "msg='Hello there'"
+ansible localhost -a "date"
+
+ansible localhost -m command -a "uptime"
+
+# Execute ansible adhoc command
+ansible localhost -m debug -a "msg='Sample text'"
+
+# Verbose mode
+ansible localhost -m debug -a "msg='Sample text'" -v
 ```
 
-### Executing linux commands - `command` & `shell` module
+### 2.3 Executing linux commands - `command` & `shell` module
 
 - You can use `command` and `shell` modules
 
@@ -34,7 +59,7 @@ ansible localhost -m shell -a "free -mh"
 ansible localhost -m shell -a "free -mh;date"
 ```
 
-### File Management modules - `file, stat, copy, lineinfile, blockinfile, template, fetch`
+### 2.4 File Management modules - `file, stat, copy, lineinfile, blockinfile, template, fetch`
 
 - **`file` module**
   - To create/delete a file or directory
@@ -59,3 +84,20 @@ ansible all -m file -a "path=/path/test1.txt' state='absent'"
 ```
 
 - **`stat` module**
+
+### 2.5 Package Management module - `yum, apt, pip`
+
+```
+ansible localhost -b -m yum -a "name='git' state='installed'"
+
+ansible localhost -b -m yum -a "name='httpd' state='installed'"
+```
+
+### 2.6 Service Management modules - `service`
+
+```
+ansible localhost -b -m service -a "name='httpd' state='started'"
+
+ansible localhost -b -m service -a "name='httpd' enabled='yes'"
+
+```
