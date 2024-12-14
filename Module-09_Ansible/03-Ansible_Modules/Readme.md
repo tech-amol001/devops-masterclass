@@ -3,7 +3,7 @@
 - <b>_Ansible Modules_</b> are discrete units of code that can be used from the command line or in a playbook task.
 - Ansible executes each module, usually on the remote managed node, and collects return values.
 
-## Getting the list of all modules
+## 01. Getting the list of all modules
 
 ```
 ansible-doc -l
@@ -14,9 +14,26 @@ ansible-doc -l | grep <module_name>
 ansible-doc <module_name>
 ```
 
-## `debug` module
+## 02. Ansible Modules
 
-## Packages manager modules - `yum, apt, pip`
+### 2.1 `debug` module
+
+- The `debug` module prints statements during playbook execution.
+- Useful for debugging variables or expressions without necessarily halting the playbook.
+
+```
+ansible localhost -a "date"
+
+ansible localhost -m command -a "uptime"
+
+# Execute ansible adhoc command
+ansible localhost -m debug -a "msg='Sample text'"
+
+# Verbose mode
+ansible localhost -m debug -a "msg='Sample text'" -v
+```
+
+## Package Management modules - `yum, apt, pip`
 
 ### `yum` module
 
@@ -31,7 +48,9 @@ ansible-doc <module_name>
 
 ### `pip` module
 
-## `service` module
+## Service Management modules - `service`
+
+###
 
 ## `copy` module
 

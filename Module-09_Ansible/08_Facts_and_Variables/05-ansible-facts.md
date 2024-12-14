@@ -24,7 +24,7 @@ ok: [xxxxxx]
 - The setup module fetches all the details from the remote hosts to our controller nodes and dumps them directly to our screen (facts).
 
 ```
-# Here -m if for module
+# Here, -m if for module
 ansible all -m setup
 
 #  Filtering out a specific value from Ansible facts
