@@ -19,4 +19,4 @@ sudo chown -R prometheus:prometheus /etc/prometheus/console_libraries
 sudo chown -R prometheus:prometheus /var/lib/prometheus
 sudo systemctl daemon-reload
 sudo systemctl enable prometheus
-sudo systemctl start Prometheus
+sudo systemctl start prometheus
