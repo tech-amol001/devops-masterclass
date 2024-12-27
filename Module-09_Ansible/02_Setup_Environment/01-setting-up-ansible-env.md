@@ -147,3 +147,7 @@ ssh <private_ip_of_rhel_client_vm>
 
 exit
 ```
+
+## References
+
+- [Complete list of Ansible utilities and it's documentation](https://docs.ansible.com/ansible/latest/command_guide/command_line_tools.html)
